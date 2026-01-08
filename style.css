@@ -1,0 +1,341 @@
+/* style.css */
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "Geneva", "Helvetica Neue", Arial, sans-serif;
+  background: #ffffff;
+  color: #000;
+}
+
+/* Page frame (old fixed-width web) */
+.page {
+  width: 760px;
+  margin: 0 auto;
+  border: 0;
+}
+
+/* Top hero */
+.top {
+  display: flex;
+  gap: 18px;
+  padding: 18px 18px 10px 18px;
+  align-items: flex-start;
+}
+
+.top-left {
+  flex: 1 1 55%;
+}
+
+.top-right {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+/* Big "Apple" wordmark (approx. 1999 look) */
+.wordmark {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 86px;
+  line-height: 0.95;
+  letter-spacing: -1px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+/* iMac. Re-birth announcement. */
+.headline {
+  margin-top: 8px;
+  margin-bottom: 12px;
+  font-family: "Times New Roman", Times, serif;
+  color: #333;
+}
+
+.headline-title {
+  font-size: 28px;
+  line-height: 1.1;
+}
+
+.headline-sub {
+  font-size: 28px;
+  line-height: 1.1;
+}
+
+/* Intro paragraph */
+.intro {
+  font-size: 14px;
+  line-height: 1.55;
+  color: #222;
+  margin: 10px 0 10px 0;
+  max-width: 360px;
+}
+
+/* QuickTime link style */
+.quicklink {
+  font-size: 12px;
+  color: #222;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.quicklink .triangle {
+  color: #0066cc;
+  font-size: 12px;
+}
+
+.quicklink a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.quicklink a:hover {
+  text-decoration: underline;
+}
+
+/* Right hero image (make it feel like a product shot) */
+.hero-img {
+  width: 330px;
+  height: 260px;
+  object-fit: cover;
+  border: 1px solid #cfcfcf;
+  border-radius: 22px;
+  background: #f2f2f2;
+}
+
+/* Timestamp bar */
+.timestamp {
+  padding: 6px 18px 6px 18px;
+  font-size: 11px;
+  color: #777;
+  text-align: right;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+/* Tiles row */
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  padding: 14px 18px 14px 18px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.tile {
+  border: 1px solid #d7d7d7;
+  background: #fff;
+}
+
+.tile-media {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f6f6f6;
+  border-bottom: 1px solid #d7d7d7;
+}
+
+/* Faux product art blocks (to mimic the old promo images) */
+.box-art,
+.device-art,
+.tower-art {
+  width: 92px;
+  height: 92px;
+  border: 1px solid #aaa;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Times New Roman", Times, serif;
+  color: #444;
+}
+
+.box-art { transform: rotate(-6deg); }
+.device-art { border-radius: 14px; }
+.tower-art { width: 70px; height: 96px; }
+
+.tile-text {
+  padding: 10px 10px 12px 10px;
+}
+
+.tile-title {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.tile-desc {
+  font-size: 12px;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* Skills list (requested) */
+.skills {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.skills li {
+  padding: 2px 0;
+}
+
+/* Projects bullets */
+.bullets {
+  margin: 0;
+  padding-left: 16px;
+}
+
+.bullets li {
+  margin: 2px 0;
+}
+
+/* Bottom black nav bar */
+.bottom-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #000;
+  color: #fff;
+  padding: 8px 10px;
+  margin: 0 18px;
+}
+
+.store {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.nav-links a:hover {
+  border-bottom-color: #fff;
+}
+
+.mini-apple {
+  margin-left: auto;
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* Underbar with old links + fake search */
+.underbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px 18px 18px;
+  font-size: 12px;
+  color: #0066cc;
+}
+
+.underbar a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.underbar a:hover {
+  text-decoration: underline;
+}
+
+.sep {
+  color: #999;
+}
+
+.fake-search {
+  margin-left: 18px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.fake-search input {
+  width: 170px;
+  height: 22px;
+  border: 1px solid #bdbdbd;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-family: "Geneva", "Helvetica Neue", Arial, sans-serif;
+}
+
+.fake-search button {
+  height: 22px;
+  border: 1px solid #bdbdbd;
+  background: #f2f2f2;
+  padding: 0 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.fake-search button:hover {
+  background: #e8e8e8;
+}
+
+.underbar-right {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+}
+
+/* Links footer */
+.links {
+  padding: 0 18px 28px 18px;
+}
+
+.footer-title {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.links a {
+  color: #0066cc;
+  text-decoration: underline;
+  font-size: 12px;
+}
+
+.links a:hover {
+  color: #004499;
+}
+
+/* Accessibility helper */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

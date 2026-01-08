@@ -1,13 +1,127 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jackson's Profile Card</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jackson — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>Jackson</h1>
-    <h2>Web Developer</h2>
-    <p>Passionate web developer with expertise in HTML, CSS, and JavaScript. Loves creating interactive and user-friendly websites.</p>
+  <div class="page">
+    <!-- Top / Hero (1999 Apple-ish layout) -->
+    <header class="top">
+      <div class="top-left">
+        <div class="wordmark">Jackson</div>
+
+        <div class="headline">
+          <div class="headline-title">Student Developer</div>
+        </div>
+
+        <p class="intro">
+          <strong></strong> — A student who wants to protect others using cybersecurity tools and
+          practices to create protective programs.
+        </p>
+
+      <div class="top-right">
+        <!-- Reuse your existing image -->
+        <img src="img/image.png" alt="Jackson" class="hero-img" />
+      </div>
+    </header>
+
+    <!-- Timestamp line (like old site footer text) -->
+    <div class="timestamp">
+      <span id="timestamp"></span>
+    </div>
+
+    <!-- Feature tiles row -->
+    <section class="tiles" aria-label="Highlights">
+      <article class="tile">
+        <div class="tile-media">
+          <div class="box-art">Mac OS 9</div>
+        </div>
+        <div class="tile-text">
+          <div class="tile-title">Your Internet co-pilot.</div>
+          <div class="tile-desc">Clean code. Safe systems. Calm ops.</div>
+        </div>
+      </article>
+
+      <article class="tile">
+        <div class="tile-media">
+          <div class="device-art">iBook</div>
+        </div>
+        <div class="tile-text">
+          <div class="tile-title">Skills. Unplugged.</div>
+          <div class="tile-desc" id="skills">
+            <ul class="skills">
+              <li>Python</li>
+              <li>C</li>
+              <li>C++</li>
+              <li>Java</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="tile">
+        <div class="tile-media">
+          <div class="tower-art">G4</div>
+        </div>
+        <div class="tile-text">
+          <div class="tile-title">Projects. Power.</div>
+          <div class="tile-desc">
+            <ul class="bullets">
+              <li>Network telemetry + monitoring</li>
+              <li>Security-focused tooling & automation</li>
+              <li>Portfolio builds & writeups</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Bottom nav bar (old Apple style) -->
+    <nav class="bottom-nav" aria-label="Site navigation">
+      <div class="store">Other Info:</div>
+
+      <div class="nav-links">
+        <a href="#hotnews">ASU Student</a>
+        <a href="#products">CS Cyber security</a>
+        <a href="#design">Undergrad</a>
+        <a href="#dev">Developer</a>
+      </div>
+
+      <div class="mini-apple" aria-hidden="true"></div>
+    </nav>
+
+    <!-- Links section (requested) -->
+    <footer class="links" id="links">
+      <h2 class="footer-title">My Links:</h2>
+      <a href="https://github.com/jacksonloops" target="_blank" rel="noreferrer">GitHub Profile</a>
+    </footer>
+  </div>
+  <script>
+  function updateTimestamp() {
+    const now = new Date();
+
+    const formatted = now.toLocaleString("en-US", {
+      timeZone: "America/Los_Angeles",
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+      hour: "numeric",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: true
+    });
+
+    document.getElementById("timestamp").textContent =
+      formatted + " PT";
+  }
+
+  updateTimestamp();              // initial render
+  setInterval(updateTimestamp, 1000); // update every second
+</script>
+
 </body>
 </html>
